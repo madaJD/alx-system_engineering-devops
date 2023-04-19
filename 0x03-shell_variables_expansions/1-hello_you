@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Hello $(whoami)"
+echo "hello $(echo $(whoami) | sed 's/.*/\u&/' | cut -c 2-)"
